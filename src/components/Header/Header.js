@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import News from '../News/News';
 
 const Header = () => {
   const [article,setArticle] = useState([])
@@ -11,7 +12,9 @@ const Header = () => {
   console.log(article);
   return (
     <div>
-      <h1>This is header</h1>
+      {
+        article.map(article => <News article={article}></News>)
+      }
     </div>
   );
 };
